@@ -6,7 +6,7 @@ const config = {
   db: {
     host: 'dbtiendyn.postgres.database.azure.com',
     port: "5432",
-    database: 'gcpuxbit',
+    database: 'puxbit',
     user: 'jbueso@dbtiendyn',
     password: 'Axalon2019..'
   }
