@@ -18,10 +18,9 @@ exports.insertAlumno = async function(req, res, next) {
   }
   if (alumno.length == 0) {
     res.send([{
-      status: 'mal'
+      status: 'false'
     }])
   } else {
-
     res.send({
       status: alumno[0]["ft_proc_insertar_alumno"]
     })
