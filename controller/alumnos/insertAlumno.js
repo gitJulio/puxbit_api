@@ -27,6 +27,6 @@ exports.insertAlumno = async function(req, res, next) {
     })
   }
 
-  res.send("aaaaaaaaaa")
+
 
 }
