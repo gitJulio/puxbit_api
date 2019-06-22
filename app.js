@@ -20,10 +20,12 @@ app.use(bodyParser.json())
 ////Rutas
 // var sorteosRouter = require('./routes/sorteos-routes')
 var alumnosRouter = require('./routes/alumnos-routes')
+var estadisticasRouter = require('./routes/estadisticas-routes')
 
 //********Ruta Principal
 // app.use('/api/', cors(op), sorteosRouter)
 app.use('/api/alumnos', cors(op), alumnosRouter)
+app.use('/api/estadisticas', cors(op), estadisticasRouter)
 
 app.get('/', function(req, res) {
   res.send('Hello Puxbit!')
