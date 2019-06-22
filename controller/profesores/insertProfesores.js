@@ -22,11 +22,4 @@ exports.insertProfesores = async function(req, res, next) {
   }
 
 
-
-
-
-
-
-
-
 }

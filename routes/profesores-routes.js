@@ -4,5 +4,6 @@ let profesores = require('../controller/profesores/profesores-controller')
 
 
 router.post('/insertProfesores/', profesores.insertProfesores);
+router.post('/getProfesores/', profesores.getProfesores);
 
 module.exports = router
