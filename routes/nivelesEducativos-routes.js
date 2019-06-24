@@ -4,5 +4,6 @@ let nivelesEducativos = require('../controller/nivelesEducativos/nivelesEducativ
 
 
 router.post('/getNivelesEducativos/', nivelesEducativos.getNivelesEducativos);
+router.post('/insertNivelEducativo/', nivelesEducativos.insertNivelEducativo);
 
 module.exports = router
