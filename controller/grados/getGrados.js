@@ -5,23 +5,23 @@ exports.getGrados = async function(req, res, next) {
 
 
 
-  // let nivelesEducativos;
-  // nivelesEducativos = await pg.func('public.ft_view_obtener_niveles_educativos',req.body.id_colegio).catch(err => {
-  //   console.log(err)
-  // })
-  //
-  // if (res.statusCode != 200) {
-  //   return
-  // }
-  // if (nivelesEducativos.length == 0) {
-  //   res.send([{
-  //     status: 'false'
-  //   }])
-  // } else {
-  //   res.send(nivelesEducativos)
-  // }
+  let grados;
+  grados = await pg.func('public.ft_view_get_grados_instituto',[req.body.id_colegio,req.body.id_nivel_educativo]).catch(err => {
+    console.log(err)
+  })
 
-res.send("aaaaaaaaa");
+  if (res.statusCode != 200) {
+    return
+  }
+  if (grados.length == 0) {
+    res.send([{
+      status: 'false'
+    }])
+  } else {
+    res.send(grados)
+  }
+
+
 
 
 
