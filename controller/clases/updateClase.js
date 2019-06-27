@@ -4,7 +4,7 @@ var fs = require('fs');
 
 exports.updateClase = async function(req, res, next) {
 
-
+  console.log("aaaaaa");
 
   let upClase;
   upClase = await pg.func('public.ft_proc_update_clase', JSON.stringify(req.body)).catch(err => {
