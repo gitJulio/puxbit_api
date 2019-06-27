@@ -5,7 +5,7 @@ var fs = require('fs');
 exports.deleteClase = async function(req, res, next) {
 
 
-
+  console.log("Aaaaaaaaa");
   let delClase;
   delClase = await pg.func('public.ft_proc_elimina_clase', req.body.id_clase).catch(err => {
     console.log(err)
