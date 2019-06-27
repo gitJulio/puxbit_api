@@ -4,6 +4,7 @@ var fs = require('fs');
 
 exports.actualizaClase = async function(req, res, next) {
 
-  console.log("Actualizaaaaa");
+  // console.log("Actualizaaaaa");
+  res.send("aaaaaaaaaaaaaaaa")
 
 }
