@@ -17,7 +17,10 @@ exports.deleteNivelEducativo = async function(req, res, next) {
       status: 'false'
     }])
   } else {
-    res.send(delNivelEducativo[0]["ft_proc_eliminar_nivel_educativo"])
+    // res.send(delNivelEducativo[0]["ft_proc_eliminar_nivel_educativo"])
+    res.send({
+      status: delNivelEducativo[0]["ft_proc_eliminar_nivel_educativo"]
+    })
   }
 
 }
