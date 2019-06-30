@@ -18,7 +18,11 @@ exports.insertProfesores = async function(req, res, next) {
       status: 'false'
     }])
   } else {
-    res.send(profesor[0]["ft_proc_insert_profesor"])
+    // res.send(profesor[0]["ft_proc_insert_profesor"])
+
+    res.send({
+      status: profesor[0]["ft_proc_insert_profesor"]
+    })
   }
 
 
