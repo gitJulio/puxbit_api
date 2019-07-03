@@ -7,7 +7,7 @@ exports.insertClase = async function(req, res, next) {
 
 
   let clase;
-  clase = await pg.func('public.ft_proc_insert_clase', JSON.stringify(req.body)).catch(err => {
+  clase = await pg.func('public.ft_proc_inserta_clase', JSON.stringify(req.body)).catch(err => {
     console.log(err)
   })
 
@@ -20,7 +20,7 @@ exports.insertClase = async function(req, res, next) {
     }])
   } else {
     res.send({
-      status: clase[0]["ft_proc_insert_clase"]
+      status: clase[0]["ft_proc_inserta_clase"]
     })
   }
 

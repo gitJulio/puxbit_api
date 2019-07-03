@@ -6,7 +6,7 @@ exports.insertMateria = async function(req, res, next) {
 
 
   let insMaterias;
-  insMaterias = await pg.func('public.ft_proc_inserta_materia', [req.body.id_colegio, req.body.descripcion]).catch(err => {
+  insMaterias = await pg.func('public.ft_proc_inserta_materia', [req.body.id_colegio, req.body.descripcion, req.body.nota_aprueba]).catch(err => {
     console.log(err)
   })
 
