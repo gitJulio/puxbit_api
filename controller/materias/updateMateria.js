@@ -6,7 +6,7 @@ exports.updateMateria = async function(req, res, next) {
 
 
   let upMateria;
-  upMateria = await pg.func('public.ft_proc_update_materia', [req.body.id_materia, req.body.descripcion]).catch(err => {
+  upMateria = await pg.func('public.ft_proc_update_materia', [req.body.id_materia, req.body.descripcion, req.body.nota_aprueba]).catch(err => {
     console.log(err)
   })
 
@@ -19,7 +19,7 @@ exports.updateMateria = async function(req, res, next) {
     }])
   } else {
     res.send({
-      status:upMateria[0]["ft_proc_update_materia"]
+      status: upMateria[0]["ft_proc_update_materia"]
     })
   }
 
