@@ -6,7 +6,7 @@ exports.deleteMateria = async function(req, res, next) {
 
 
   let delMateria;
-  delMateria = await pg.func('public.ft_proc_eliminar_materia', req.body.id_colegio).catch(err => {
+  delMateria = await pg.func('public.ft_proc_eliminar_materia', req.body.id_materia).catch(err => {
     console.log(err)
   })
 
