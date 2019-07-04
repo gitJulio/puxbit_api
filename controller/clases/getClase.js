@@ -7,7 +7,7 @@ exports.getClase = async function(req, res, next) {
 
 
   let gClase;
-  gClase = await pg.func('public.ft_view_clase', req.body.id_grado).catch(err => {
+  gClase = await pg.func('public.ft_view_clase', [req.body.id_grado, req.body.id_seccion]).catch(err => {
     console.log(err)
   })
 
