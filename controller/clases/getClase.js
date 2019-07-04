@@ -11,7 +11,7 @@ exports.getClase = async function(req, res, next) {
     console.log(err)
   })
 
-  console.log(gClase);
+
 
   if (res.statusCode != 200) {
     return
@@ -21,7 +21,7 @@ exports.getClase = async function(req, res, next) {
       status: 'false'
     }])
   } else {
-    res.send(gClase[0]["ft_view_clase"])
+    res.send(gClase)
   }
 
 
