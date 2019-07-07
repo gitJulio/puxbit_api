@@ -5,6 +5,7 @@ let jornadas = require('../controller/jornadas/jornadas-controller')
 
 router.post('/getJornadas/', jornadas.getJornadas);
 router.post('/insertJornada/', jornadas.insertJornada);
+router.post('/updateJornada/', jornadas.updateJornada);
 
 
 module.exports = router
