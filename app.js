@@ -27,6 +27,7 @@ var nivelesEducativosRouter = require('./routes/nivelesEducativos-routes')
 var gradosRouter = require('./routes/grados-routes')
 var seccionesRouter = require('./routes/secciones-routes')
 var materiasRouter = require('./routes/materias-routes')
+var jornadasRouter = require('./routes/jornadas-routes')
 
 //********Ruta Principal
 // app.use('/api/', cors(op), sorteosRouter)
@@ -38,6 +39,7 @@ app.use('/api/nivelesEducativos', cors(op), nivelesEducativosRouter)
 app.use('/api/grados', cors(op), gradosRouter)
 app.use('/api/secciones', cors(op), seccionesRouter)
 app.use('/api/materias', cors(op), materiasRouter)
+app.use('/api/jornadas', cors(op), jornadasRouter)
 
 app.get('/', function(req, res) {
   res.send('Hello Puxbit!')
