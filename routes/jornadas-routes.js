@@ -7,6 +7,7 @@ router.post('/getJornadas/', jornadas.getJornadas);
 router.post('/insertJornada/', jornadas.insertJornada);
 router.post('/updateJornada/', jornadas.updateJornada);
 router.post('/deleteJornada/', jornadas.deleteJornada);
+router.post('/getHorasJornadas/', jornadas.getHorasJornadas);
 
 
 module.exports = router
