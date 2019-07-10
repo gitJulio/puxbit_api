@@ -6,6 +6,7 @@ var deleteJornada = require('./deleteJornada')
 var getHorasJornadas = require('./getHorasJornadas')
 var insertHorasJornadas = require('./insertHorasJornadas')
 var getDias = require('./getDias')
+var insertClasesHorariosetDias = require('./insertClasesHorariosetDias')
 
 
 
@@ -17,3 +18,4 @@ exports.deleteJornada = deleteJornada.deleteJornada;
 exports.getHorasJornadas = getHorasJornadas.getHorasJornadas;
 exports.insertHorasJornadas = insertHorasJornadas.insertHorasJornadas;
 exports.getDias = getDias.getDias;
+exports.insertClasesHorariosetDias = insertClasesHorariosetDias.insertClasesHorariosetDias;
