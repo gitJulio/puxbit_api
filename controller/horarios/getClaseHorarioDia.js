@@ -1,13 +1,13 @@
 const pg = require('../../configuracion/ps_connection')
 
 
-exports.getHorariosClases = async function(req, res, next) {
+exports.getClaseHorarioDia = async function(req, res, next) {
 
   // [req.body.p_id_grado,req.body.p_id_jornada,req.body.p_id_seccion]
 
   console.log(JSON.stringify(req.body));
   let horariosClases;
-  horariosClases = await pg.func('public.ft_view_clases_horarios', JSON.stringify(req.body)).catch(err => {
+  horariosClases = await pg.func('public.ft_view_tabla_horarios_clases', JSON.stringify(req.body)).catch(err => {
     console.log(err)
   })
 
@@ -19,7 +19,9 @@ exports.getHorariosClases = async function(req, res, next) {
       status: 'false'
     }])
   } else {
-    res.send(horariosClases[0]["ft_view_clases_horarios"][0]["dias_horas_materias"])
+    res.send({
+      id_clase:horariosClases[0]["ft_view_tabla_horarios_clases"]
+    })
   }
 
 
