@@ -29,6 +29,7 @@ var seccionesRouter = require('./routes/secciones-routes')
 var materiasRouter = require('./routes/materias-routes')
 var jornadasRouter = require('./routes/jornadas-routes')
 var horariosRouter = require('./routes/horarios-routes')
+var pagosRouter=require('./routes/pagos-routes')
 
 //********Ruta Principal
 // app.use('/api/', cors(op), sorteosRouter)
@@ -42,6 +43,7 @@ app.use('/api/secciones', cors(op), seccionesRouter)
 app.use('/api/materias', cors(op), materiasRouter)
 app.use('/api/jornadas', cors(op), jornadasRouter)
 app.use('/api/horarios', cors(op), horariosRouter)
+app.use('/api/pagos', cors(op), pagosRouter)
 
 app.get('/', function(req, res) {
   res.send('Hello Puxbit!')
