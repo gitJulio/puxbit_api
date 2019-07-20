@@ -9,10 +9,14 @@ exports.getGradosNivel = async function(req, res, next) {
     console.log(err)
   })
 
+  console.log("**********");
+  console.log(gradosNivel);
+  console.log("**********");
+
   if (res.statusCode != 200) {
     return
   }
-  if (gradosNivel.length == 0) {
+  if (gradosNivel.length == 0  || gradosNivel[0]["ft_view_grados_nivel"]==null) {
     res.send([{
       status: 'false'
     }])
