@@ -9,9 +9,6 @@ exports.getGradosNivel = async function(req, res, next) {
     console.log(err)
   })
 
-  console.log("**********");
-  console.log(gradosNivel);
-  console.log("**********");
 
   if (res.statusCode != 200) {
     return
