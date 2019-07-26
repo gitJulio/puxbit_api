@@ -8,5 +8,6 @@ router.post('/getAlumnos/', alumnos.getAlumnos);
 router.post('/eliminarAlumno/', alumnos.eliminarAlumno);
 router.post('/updateAlumnos/', alumnos.updateAlumnos);
 router.post('/getAlumno/', alumnos.getAlumno);
+router.post('/insertParentesco/', alumnos.insertParentesco);
 
 module.exports = router
