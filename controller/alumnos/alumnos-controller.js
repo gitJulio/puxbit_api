@@ -4,6 +4,7 @@ var eliminarAlumno = require('./eliminarAlumno')
 var updateAlumnos = require('./updateAlumnos')
 var getAlumno = require('./getAlumno')
 var insertParentesco = require('./insertParentesco')
+var getAlumnoForPadre = require('./getAlumnoForPadre')
 
 
 exports.insertAlumno = insertAlumno.insertAlumno;
@@ -12,3 +13,4 @@ exports.eliminarAlumno = eliminarAlumno.eliminarAlumno;
 exports.updateAlumnos = updateAlumnos.updateAlumnos;
 exports.getAlumno = getAlumno.getAlumno;
 exports.insertParentesco = insertParentesco.insertParentesco;
+exports.getAlumnoForPadre = getAlumnoForPadre.getAlumnoForPadre;
