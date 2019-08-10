@@ -4,6 +4,6 @@ let pagos = require('../controller/pagos/pagos-controller')
 
 router.post('/getPagos/', pagos.getPagos)
 router.post('/insertPrecioGrado/', pagos.insertPrecioGrado)
-router.post('/getMensualidadesPagos/', pagos.getMensualidadesPagos)
+router.post('/getPrecioGrados/', pagos.getPrecioGrados)
 
 module.exports=router

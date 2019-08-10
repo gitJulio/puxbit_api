@@ -2,7 +2,7 @@ const pg = require('../../configuracion/ps_connection')
 const readline = require("readline");
 var fs = require('fs');
 
-exports.getMensualidadesPagos = async function(req, res, next) {
+exports.getPrecioGrados = async function(req, res, next) {
 
 // res.send("aaaaaaaaaaaaaaa")
 
