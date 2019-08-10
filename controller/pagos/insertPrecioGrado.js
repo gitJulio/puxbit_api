@@ -9,6 +9,9 @@ exports.insertPrecioGrado = async function(req, res, next) {
 let pagos;
  pagos= await pg.func('public.ft_proc_insert_detalle_mensualidad',JSON.stringify(req.body)).catch(err=>{
    console.log(err);
+   res.send({
+     status:false
+   })
  })
 
  if(res.statusCode != 200){
