@@ -1,7 +1,9 @@
 var getPagos = require('./getPagos')
-var insertMensualidadesPagos = require('./insertMensualidadesPagos')
+var insertPrecioGrado = require('./insertPrecioGrado')
+var getMensualidadesPagos = require('./getMensualidadesPagos')
 
 
 
 exports.getPagos = getPagos.getPagos;
-exports.insertMensualidadesPagos = insertMensualidadesPagos.insertMensualidadesPagos;
+exports.insertPrecioGrado = insertPrecioGrado.insertPrecioGrado;
+exports.getMensualidadesPagos = getMensualidadesPagos.getMensualidadesPagos;
