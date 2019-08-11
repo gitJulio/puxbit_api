@@ -23,7 +23,7 @@ let deletePrecio;
      status:false
    })
  }else{
-   res.send(deletePrecio[0]["ft_proc_delete_precio_pago"])
+   res.send({status:deletePrecio[0]["ft_proc_delete_precio_pago"]})
  }
 
 
