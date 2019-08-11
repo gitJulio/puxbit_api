@@ -6,5 +6,6 @@ router.post('/getPagos/', pagos.getPagos)
 router.post('/insertPrecioGrado/', pagos.insertPrecioGrado)
 router.post('/getPrecioGrados/', pagos.getPrecioGrados)
 router.post('/updatePrecioGrados/', pagos.updatePrecioGrados)
+router.post('/deletePrecioGrado/', pagos.deletePrecioGrado)
 
 module.exports=router
