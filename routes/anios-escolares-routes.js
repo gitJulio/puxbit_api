@@ -4,7 +4,7 @@ let anio_escolares = require('../controller/anios-escolares/anios-escolares-cont
 
 
 router.post('/getAniosEscolares/', anio_escolares .getAniosEscolares);
-// router.post('/getAlumnos/', alumnos.getAlumnos);
+router.post('/updateAnioEscolar/', anio_escolares.updateAnioEscolar);
 // router.post('/eliminarAlumno/', alumnos.eliminarAlumno);
 // router.post('/updateAlumnos/', alumnos.updateAlumnos);
 // router.post('/getAlumno/', alumnos.getAlumno);

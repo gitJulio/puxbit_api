@@ -1,9 +1,9 @@
 var getAniosEscolares = require('./getAniosEscolares')
-// var insertRecargo = require('./insertRecargo')
+var updateAnioEscolar = require('./updateAnioEscolar')
 // var getPrecioGrados = require('./getPrecioGrados')
 
 
 
 exports.getAniosEscolares = getAniosEscolares.getAniosEscolares;
-// exports.insertRecargo = insertRecargo.insertRecargo;
+exports.updateAnioEscolar = updateAnioEscolar.updateAnioEscolar;
 // exports.getPrecioGrados = getPrecioGrados.getPrecioGrados;
