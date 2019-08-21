@@ -7,7 +7,7 @@ exports.getPagosAlumnos = async function(req, res, next) {
 // res.send("aaaaaaaaaaaaaaa")
 
 let pagos;
- pagos= await pg.func('public.ft_view_pago_alumnos',req.body.id_colegio).catch(err=>{
+ pagos= await pg.func('public.ft_view_pago_alumnos',[req.body.id_colegio,req.body.id_anio_escolar,req.body.id_jornada,req.body.id_seccion,req.body.id_grado]).catch(err=>{
    console.log(err);
  })
 
