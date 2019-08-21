@@ -20,7 +20,7 @@ let pagos;
      status:false
    })
  }else{
-   res.send(pagos)
+   res.send(pagos[0]["ft_view_pago_alumnos"])
  }
 
   //
