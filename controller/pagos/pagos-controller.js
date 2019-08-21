@@ -4,6 +4,7 @@ var getPrecioGrados = require('./getPrecioGrados')
 var updatePrecioGrados = require('./updatePrecioGrados')
 var deletePrecioGrado = require('./deletePrecioGrado')
 var insertPagosAlumnos = require('./insertPagosAlumnos')
+var getPagosAlumnos = require('./getPagosAlumnos')
 
 
 
@@ -13,3 +14,4 @@ exports.getPrecioGrados = getPrecioGrados.getPrecioGrados;
 exports.updatePrecioGrados = updatePrecioGrados.updatePrecioGrados;
 exports.deletePrecioGrado = deletePrecioGrado.deletePrecioGrado;
 exports.insertPagosAlumnos = insertPagosAlumnos.insertPagosAlumnos;
+exports.getPagosAlumnos = getPagosAlumnos.getPagosAlumnos;
