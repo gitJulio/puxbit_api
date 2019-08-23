@@ -4,12 +4,11 @@ var fs = require('fs');
 
 exports.getMeses = async function(req, res, next) {
 
-// res.send("aaaaaaaaaaaaaaa")
 
 let meses;
  meses= await pg.func('public.ft_view_meses').catch(err=>{
    console.log(err);
-
+})
  if(res.statusCode != 200){
    return
  }
