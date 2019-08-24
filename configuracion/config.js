@@ -3,6 +3,11 @@ process.env.PORT = process.env.PORT || 7000;
 process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 30;
 
 const config = {
+  app: {
+    host: "localhost",
+    api_key: "NTQyODQyNzM2MGE4NWI0MDFjNmMzYjZhMDE5NzgyY2Q",
+    backup: false
+  },
   db: {
     host: 'dbtiendyn.postgres.database.azure.com',
     port: "5432",
