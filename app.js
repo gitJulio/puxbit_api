@@ -33,6 +33,7 @@ var pagosRouter=require('./routes/pagos-routes')
 var encargadosRotuer=require('./routes/encargados-routes')
 var recargosRotuer=require('./routes/recargos-routes')
 var anios_escolaresRotuer=require('./routes/anios-escolares-routes')
+var usuariosRouter=require('./routes/usuarios-routes')
 
 //********Ruta Principal
 // app.use('/api/', cors(op), sorteosRouter)
@@ -50,6 +51,7 @@ app.use('/api/pagos', cors(op), pagosRouter)
 app.use('/api/encargados', cors(op), encargadosRotuer)
 app.use('/api/recargos', cors(op), recargosRotuer)
 app.use('/api/anios-escolares', cors(op), anios_escolaresRotuer)
+app.use('/api/usuarios', cors(op), usuariosRouter)
 
 app.get('/', function(req, res) {
   res.send('Hello Puxbit!')
