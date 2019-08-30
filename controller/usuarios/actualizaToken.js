@@ -1,22 +1,21 @@
 const pg = require('../../configuracion/ps_connection')
 const jwt = require('jsonwebtoken')
 
-exports.getLogin = async function(req, res, next) {
 
+exports.actualizaToken = async function(req, res, next) {
 
-    let body = req.body;
 
     let usuario =
-        await pg.func('public.ft_view_get_usuario', [body.email, body.password]).catch(err => {
+        await pg.func('public.ft_proc_actualiza_token', req.body.token).catch(err => {
             res.status(500).send({
                 error: err,
                 status: 500
             })
         })
+    console.log(usuario);
 
 
-
-    if (usuario && usuario != '') {
+    if (usuario.length > 0) {
         let token = jwt.sign({
             id: usuario[0].id_usuario,
             nivel: usuario[0].nivel,
@@ -30,16 +29,12 @@ exports.getLogin = async function(req, res, next) {
             })
         })
 
-        res.send({
-            ok: true,
-            usuario: usuario[0].correo,
-            token
-        })
+        res.send("Actualziado")
+
     } else {
-        res.status(400).send({
-            error: "usuario o contraseña invalidos"
+        res.send({
+            status: false
         })
     }
-
 
 }
