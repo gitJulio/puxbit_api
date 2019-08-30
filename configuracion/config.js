@@ -1,6 +1,6 @@
 process.env.PORT = process.env.PORT || 7000;
 
-process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 5;
+process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 2;
 
 process.env.SEED = process.env.SEED || 'es-te-es-el-seed-desarrollo';
 
