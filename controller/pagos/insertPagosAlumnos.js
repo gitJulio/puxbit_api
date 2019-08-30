@@ -7,7 +7,7 @@ exports.insertPagosAlumnos = async function(req, res, next) {
 
 
   let pagos;
-  pagos = await pg.func('public.ft_proc_insert_pago_mensualidad', [req.body.id_colegio, req.body.id_alumno, req.body.id_mensualidad]).catch(err => {
+  pagos = await pg.func('public.ft_proc_insert_pago_mensualidad', [process.env.id_colegio, req.body.id_alumno, req.body.id_mensualidad]).catch(err => {
     console.log(err);
     res.send({
       status: false

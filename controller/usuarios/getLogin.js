@@ -1,7 +1,9 @@
 const pg = require('../../configuracion/ps_connection')
 const jwt = require('jsonwebtoken')
 
+
 exports.getLogin = async function(req, res, next) {
+
 
 
   let body = req.body;
@@ -20,7 +22,8 @@ exports.getLogin = async function(req, res, next) {
     let token = jwt.sign({
       id: usuario[0].id_usuario,
       nivel: usuario[0].nivel,
-      id_colegio: usuario[0].id_colegio
+      id_colegio: usuario[0].id_colegio,
+      id_anio_escolar: usuario[0].id_anio_escolar
     }, process.env.SEED, {
       expiresIn: process.env.CADUCIDAD_TOKEN
     });

@@ -7,7 +7,7 @@ exports.getPagosAlumnos = async function(req, res, next) {
 
 
   let pagos;
-  pagos = await pg.func('public.ft_view_pago_alumnos', [req.body.id_colegio, req.body.id_anio_escolar, req.body.id_jornada, req.body.id_seccion, req.body.id_grado]).catch(err => {
+  pagos = await pg.func('public.ft_view_pago_alumnos', [process.env.id_colegio, process.env.id_anio_escolar, req.body.id_jornada, req.body.id_seccion, req.body.id_grado]).catch(err => {
     console.log(err);
   })
 
@@ -25,7 +25,7 @@ exports.getPagosAlumnos = async function(req, res, next) {
 
   //
   // let nivelesEducativos;
-  // nivelesEducativos = await pg.func('public.ft_view_obtener_niveles_educativos',req.body.id_colegio).catch(err => {
+  // nivelesEducativos = await pg.func('public.ft_view_obtener_niveles_educativos',process.env.id_colegio).catch(err => {
   //   console.log(err)
   // })
   //

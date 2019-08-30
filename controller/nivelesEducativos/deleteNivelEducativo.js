@@ -5,7 +5,7 @@ exports.deleteNivelEducativo = async function(req, res, next) {
 
 
   let delNivelEducativo;
-  delNivelEducativo = await pg.func('public.ft_proc_eliminar_nivel_educativo',[req.body.id_colegio, req.body.id_nivel_educativo]).catch(err => {
+  delNivelEducativo = await pg.func('public.ft_proc_eliminar_nivel_educativo',[process.env.id_colegio, req.body.id_nivel_educativo]).catch(err => {
     console.log(err)
   })
 

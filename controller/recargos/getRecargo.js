@@ -6,7 +6,7 @@ exports.getRecargo = async function(req, res, next) {
 
 
   let recargos;
-  recargos = await pg.func('public.ft_view_recargos', [req.body.id_colegio, req.body.id_anio_escolar]).catch(err => {
+  recargos = await pg.func('public.ft_view_recargos', [process.env.id_colegio, process.env.id_anio_escolar]).catch(err => {
     console.log(err);
     res.send({
       status: false

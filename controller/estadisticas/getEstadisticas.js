@@ -5,7 +5,7 @@ exports.getEstadisticas = async function(req, res, next) {
 
 
   let estadisticas;
-  estadisticas = await pg.func('public.ft_view_estadisticas_institucion', req.body.id_colegio).catch(err => {
+  estadisticas = await pg.func('public.ft_view_estadisticas_institucion', process.env.id_colegio).catch(err => {
     console.log(err)
   })
 

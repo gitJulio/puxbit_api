@@ -5,7 +5,7 @@ exports.getGradosNivel = async function(req, res, next) {
 
 
   let gradosNivel;
-  gradosNivel = await pg.func('public.ft_view_grados_nivel', [req.body.id_nivel, req.body.id_colegio]).catch(err => {
+  gradosNivel = await pg.func('public.ft_view_grados_nivel', [req.body.id_nivel, process.env.id_colegio]).catch(err => {
     console.log(err)
   })
 

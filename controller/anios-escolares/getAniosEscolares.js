@@ -6,7 +6,7 @@ exports.getAniosEscolares = async function(req, res, next) {
 // res.send("aaaaaaaaaaaaaaa")
 
 let anio_escolar;
- anio_escolar= await pg.func('public.ft_view_anio_escolar',[req.body.id_colegio]).catch(err=>{
+ anio_escolar= await pg.func('public.ft_view_anio_escolar',[process.env.id_colegio]).catch(err=>{
    console.log(err);
    res.send({
      status:false

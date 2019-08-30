@@ -5,7 +5,7 @@ exports.updateNivelEducativo = async function(req, res, next) {
 
 
   let upNivelEducativo;
-  upNivelEducativo = await pg.func('public.ft_proc_update_nivel_educativo',[req.body.id_colegio, req.body.descripcion, req.body.id_nivel_educativo]).catch(err => {
+  upNivelEducativo = await pg.func('public.ft_proc_update_nivel_educativo',[process.env.id_colegio, req.body.descripcion, req.body.id_nivel_educativo]).catch(err => {
     console.log(err)
   })
 

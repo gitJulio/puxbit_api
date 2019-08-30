@@ -6,7 +6,7 @@ exports.getJornadas = async function(req, res, next) {
 
 
   let jornadas;
-  jornadas = await pg.func('public.ft_view_get_jornadas', req.body.id_colegio).catch(err => {
+  jornadas = await pg.func('public.ft_view_get_jornadas', process.env.id_colegio).catch(err => {
     console.log(err)
   })
 

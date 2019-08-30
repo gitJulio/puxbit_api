@@ -4,7 +4,7 @@ exports.getSecciones = async function(req, res, next) {
 
 
   let secciones;
-  secciones = await pg.func('public.ft_view_secciones',req.body.id_colegio).catch(err => {
+  secciones = await pg.func('public.ft_view_secciones',process.env.id_colegio).catch(err => {
     console.log(err)
   })
 

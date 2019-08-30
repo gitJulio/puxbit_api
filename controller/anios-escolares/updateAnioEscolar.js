@@ -6,7 +6,7 @@ exports.updateAnioEscolar = async function(req, res, next) {
 
 
 let anio_escolar;
- anio_escolar= await pg.func('public.ft_proc_update_anio_escolar',[req.body.id_anio_escolar, req.body.anio_en_curso]).catch(err=>{
+ anio_escolar= await pg.func('public.ft_proc_update_anio_escolar',[process.env.id_anio_escolar, req.body.anio_en_curso]).catch(err=>{
    console.log(err);
    res.send({
      status:false

@@ -7,7 +7,7 @@ exports.getPrecioGrados = async function(req, res, next) {
 
 
   let pagos;
-  pagos = await pg.func('public.ft_view_pagos_mensualidades', [req.body.id_anio_escolar, req.body.id_colegio]).catch(err => {
+  pagos = await pg.func('public.ft_view_pagos_mensualidades', [process.env.id_anio_escolar, process.env.id_colegio]).catch(err => {
     console.log(err);
   })
 

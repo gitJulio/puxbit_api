@@ -5,7 +5,7 @@ const readline = require("readline");
 exports.getEncargados = async function(req, res, next) {
 
   let encargados;
-  encargados = await pg.func('public.ft_view_get_encargados', req.body.id_colegio).catch(err => {
+  encargados = await pg.func('public.ft_view_get_encargados', process.env.id_colegio).catch(err => {
     console.log(err)
   })
 

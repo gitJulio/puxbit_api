@@ -6,7 +6,7 @@ exports.getMaterias = async function(req, res, next) {
 
 
   let materias;
-  materias = await pg.func('public.ft_view_materia', req.body.id_colegio).catch(err => {
+  materias = await pg.func('public.ft_view_materia', process.env.id_colegio).catch(err => {
     console.log(err)
   })
 

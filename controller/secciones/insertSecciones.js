@@ -4,7 +4,7 @@ exports.insertSecciones = async function(req, res, next) {
 
 
   let insertSecciones;
-  insertSecciones = await pg.func('public.ft_proc_insert_secciones',[req.body.id_colegio,req.body.descripcion]).catch(err => {
+  insertSecciones = await pg.func('public.ft_proc_insert_secciones',[process.env.id_colegio,req.body.descripcion]).catch(err => {
     console.log(err)
   })
 

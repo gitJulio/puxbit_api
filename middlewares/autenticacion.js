@@ -31,7 +31,9 @@ module.exports.verificaToken = (req, res, next) => {
       })
     }
     // console.log(decoded);
-    // req.nivel = decoded.nivel;
+    process.env.id_colegio = decoded.id_colegio
+    process.env.id_anio_escolar = decoded.id_anio_escolar
+    req.id_colegio = decoded;
   })
 
   next();

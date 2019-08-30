@@ -25,7 +25,7 @@ exports.getPagos = async function(req, res, next) {
 
   //
   // let nivelesEducativos;
-  // nivelesEducativos = await pg.func('public.ft_view_obtener_niveles_educativos',req.body.id_colegio).catch(err => {
+  // nivelesEducativos = await pg.func('public.ft_view_obtener_niveles_educativos',process.env.id_colegio).catch(err => {
   //   console.log(err)
   // })
   //
