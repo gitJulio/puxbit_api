@@ -6,7 +6,7 @@ var mdAunt = require('../middlewares/autenticacion.js')
 /* uso de middleware */
 router.use(mdAunt.content_type)
 router.use(mdAunt.api_key)
-// router.use(mdAunt.token_validation)
+router.use(mdAunt.verificaToken)
 
 router.post('/getPagos/', pagos.getPagos)
 router.post('/insertPrecioGrado/', pagos.insertPrecioGrado)
@@ -17,4 +17,4 @@ router.post('/insertPagosAlumnos/', pagos.insertPagosAlumnos)
 router.post('/getPagosAlumnos/', pagos.getPagosAlumnos)
 router.post('/getMeses/', pagos.getMeses)
 
-module.exports=router
+module.exports = router

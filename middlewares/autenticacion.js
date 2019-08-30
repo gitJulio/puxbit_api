@@ -1,5 +1,7 @@
 let config = require('../configuracion/config')
 let pg = require('../configuracion/ps_connection')
+let jwt = require('jsonwebtoken')
+
 
 module.exports.content_type = function(req, res, next) {
   if (req.get('content-type') == 'application/json') {
@@ -18,24 +20,22 @@ module.exports.api_key = function(req, res, next) {
 }
 
 // //**********verifica data_token
-// const jwt = require('jsonwebtoken')
 
-// let verificaToken = (req, res, next) => {
-//   let token = req.get('token');
-//   jwt.verify(token, process.env.SEED, (err, decoded) => {
-//     if (err) {
-//       res.status(401).json({
-//         ok: false,
-//         err
-//       })
-//     }
-//     req.id = decoded.id;
-//     req.nivel = decoded.nivel;
-//   })
+module.exports.verificaToken = (req, res, next) => {
+  let token = req.get('token');
+  // console.log(token);
+  jwt.verify(token, process.env.SEED, (err, decoded) => {
+    if (err) {
+      res.status(401).json({
+        status: 'invalid'
+      })
+    }
+    // console.log(decoded);
+    // req.nivel = decoded.nivel;
+  })
 
-//   next();
-// }
-
+  next();
+}
 
 // module.exports = {
 //   verificaToken

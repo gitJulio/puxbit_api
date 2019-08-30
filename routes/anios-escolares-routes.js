@@ -5,6 +5,7 @@ var mdAunt = require('../middlewares/autenticacion.js')
 
 router.use(mdAunt.content_type)
 router.use(mdAunt.api_key)
+router.use(mdAunt.verificaToken)
 
 router.post('/getAniosEscolares/', anio_escolares.getAniosEscolares);
 router.post('/updateAnioEscolar/', anio_escolares.updateAnioEscolar);

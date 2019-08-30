@@ -5,7 +5,7 @@ var mdAunt = require('../middlewares/autenticacion.js')
 
 router.use(mdAunt.content_type)
 router.use(mdAunt.api_key)
-
+router.use(mdAunt.verificaToken)
 
 router.post('/getNivelesEducativos/', nivelesEducativos.getNivelesEducativos);
 router.post('/insertNivelEducativo/', nivelesEducativos.insertNivelEducativo);
