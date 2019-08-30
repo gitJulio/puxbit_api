@@ -1,12 +1,12 @@
 const pg = require('../../configuracion/ps_connection')
 const readline = require("readline");
-var fs = require('fs');
+
 
 exports.deleteProfesores = async function(req, res, next) {
 
 
   let profesor;
-  profesor = await pg.func('public.ft_proc_eliminar_profesor',req.body.idprofesor).catch(err => {
+  profesor = await pg.func('public.ft_proc_eliminar_profesor', req.body.idprofesor).catch(err => {
     console.log(err)
   })
 

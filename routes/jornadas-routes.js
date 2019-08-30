@@ -1,6 +1,10 @@
 let express = require('express')
 let router = express.Router()
 let jornadas = require('../controller/jornadas/jornadas-controller')
+var mdAunt = require('../middlewares/autenticacion.js')
+
+router.use(mdAunt.content_type)
+router.use(mdAunt.api_key)
 
 
 router.post('/getJornadas/', jornadas.getJornadas);

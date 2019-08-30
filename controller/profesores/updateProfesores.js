@@ -1,12 +1,12 @@
 const pg = require('../../configuracion/ps_connection')
 const readline = require("readline");
-var fs = require('fs');
+
 
 exports.updateProfesores = async function(req, res, next) {
 
 
   let profesor;
-  profesor = await pg.func('public.ft_proc_update_profesor',JSON.stringify(req.body)).catch(err => {
+  profesor = await pg.func('public.ft_proc_update_profesor', JSON.stringify(req.body)).catch(err => {
     console.log(err)
   })
 
@@ -18,8 +18,6 @@ exports.updateProfesores = async function(req, res, next) {
       status: 'false'
     }])
   } else {
-    // res.send(profesor[0]["ft_proc_insert_profesor"])
-
     res.send({
       status: profesor[0]["ft_proc_update_profesor"]
     })

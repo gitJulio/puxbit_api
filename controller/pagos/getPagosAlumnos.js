@@ -1,27 +1,27 @@
 const pg = require('../../configuracion/ps_connection')
 const readline = require("readline");
-var fs = require('fs');
+
 
 exports.getPagosAlumnos = async function(req, res, next) {
 
-// res.send("aaaaaaaaaaaaa/aa")
 
-let pagos;
- pagos= await pg.func('public.ft_view_pago_alumnos',[req.body.id_colegio,req.body.id_anio_escolar,req.body.id_jornada,req.body.id_seccion,req.body.id_grado]).catch(err=>{
-   console.log(err);
- })
 
- if(res.statusCode != 200){
-   return
- }
+  let pagos;
+  pagos = await pg.func('public.ft_view_pago_alumnos', [req.body.id_colegio, req.body.id_anio_escolar, req.body.id_jornada, req.body.id_seccion, req.body.id_grado]).catch(err => {
+    console.log(err);
+  })
 
- if(pagos.length==0){
-   res.send({
-     status:false
-   })
- }else{
-   res.send(pagos[0]["ft_view_pago_alumnos"])
- }
+  if (res.statusCode != 200) {
+    return
+  }
+
+  if (pagos.length == 0) {
+    res.send({
+      status: false
+    })
+  } else {
+    res.send(pagos[0]["ft_view_pago_alumnos"])
+  }
 
   //
   // let nivelesEducativos;

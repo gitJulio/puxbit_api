@@ -1,12 +1,12 @@
 const pg = require('../../configuracion/ps_connection')
 const readline = require("readline");
-var fs = require('fs');
+
 
 exports.insertParentesco = async function(req, res, next) {
 
 
   let parentesco;
-  parentesco = await pg.func('public.ft_proc_insert_parentesco',[req.body.id_alumno,req.body.id_padre,req.body.parentesco]).catch(err => {
+  parentesco = await pg.func('public.ft_proc_insert_parentesco', [req.body.id_alumno, req.body.id_padre, req.body.parentesco]).catch(err => {
     console.log(err)
   })
 

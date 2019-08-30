@@ -1,7 +1,10 @@
 let express = require('express')
 let router = express.Router()
 let clases = require('../controller/clases/clases-controller')
+var mdAunt = require('../middlewares/autenticacion.js')
 
+router.use(mdAunt.content_type)
+router.use(mdAunt.api_key)
 
 router.post('/insertClase/', clases.insertClase);
 router.post('/updateClase/', clases.updateClase);
