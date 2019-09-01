@@ -1,14 +1,14 @@
 let express = require('express')
 let router = express.Router()
-let usuarios = require('../controller/usuarios/usuarios-controller')
+let dataUsuario = require('../controller/dataUsuario/dataUsuario-controller')
 var mdAunt = require('../middlewares/autenticacion.js')
 
 router.use(mdAunt.content_type)
 router.use(mdAunt.api_key)
-    // router.use(mdAunt.verificaToken)
+router.use(mdAunt.verificaToken)
 
-router.post('/getLogin', usuarios.getLogin)
+router.post('/getDataUsuario', dataUsuario.getDataUsuario)
 
-router.post('/actualizaToken', usuarios.actualizaToken)
+
 
 module.exports = router
