@@ -5,8 +5,20 @@ const readline = require("readline");
 exports.insertProfesores = async function(req, res, next) {
 
 
+
+  let data_profesor=[{
+  correo: req.body.correo,
+  direccion: req.body.direccion,
+  fecha_nacimiento: req.body.fecha_nacimiento,
+  identidad: req.body.identidad,
+  nombre: req.body.nombre,
+  salario: req.body.salario,
+  sexo: req.body.sexo,
+  telefono: req.body.telefono,
+  id_colegio:process.env.id_colegio
+  }]
   let profesor;
-  profesor = await pg.func('public.ft_proc_insert_profesor', JSON.stringify(req.body)).catch(err => {
+  profesor = await pg.func('public.ft_proc_insert_profesor', JSON.stringify(data_profesor)).catch(err => {
     console.log(err)
   })
 
