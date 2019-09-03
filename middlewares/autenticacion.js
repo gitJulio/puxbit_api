@@ -30,7 +30,7 @@ module.exports.verificaToken = (req, res, next) => {
         status: 'invalid'
       })
     }
-     console.log(decoded);
+     // console.log(decoded);
     process.env.id_colegio = decoded.id_colegio
     process.env.id_usuario=decoded.id
     process.env.id_anio_escolar = decoded.id_anio_escolar

@@ -5,8 +5,16 @@ exports.insertGrado = async function(req, res, next) {
 
 
 
+  let data_grado=[{
+    id_colegio:process.env.id_colegio,
+    id_anio_escolar:process.env.id_anio_escolar,
+    id_nivel_educativo:req.body.id_nivel_educativo,
+    descripcion:req.body.descripcion
+  }]
+
+
   let insertarGrado;
-  insertarGrado = await pg.func('public.ft_proc_insert_grado', JSON.stringify(req.body)).catch(err => {
+  insertarGrado = await pg.func('public.ft_proc_insert_grado', JSON.stringify(data_grado)).catch(err => {
     console.log(err)
   })
 
