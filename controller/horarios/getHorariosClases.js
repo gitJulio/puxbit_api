@@ -19,7 +19,7 @@ exports.getHorariosClases = async function(req, res, next) {
       status: 'false'
     }])
   } else {
-    res.send(horariosClases[0]["ft_view_clases_horarios"][0]["dias_horas_materias"])
+    res.send(horariosClases[0]["ft_view_clases_horarios"])
   }
 
 
