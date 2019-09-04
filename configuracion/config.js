@@ -13,7 +13,7 @@ const config = {
     backup: false
   },
   db: {
-    host: '52.176.97.243',
+    host: 'localhost',
     port: "5432",
     database: 'puxbit',
     user: 'puxbit',
