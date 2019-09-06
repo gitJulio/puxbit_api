@@ -39,5 +39,8 @@
     "twilio": "^3.30.2",
     "utf8": "^3.0.0",
     "vamtiger-get-body-inner-html": "0.0.4"
+  },
+  "devDependencies": {
+    "socket.io": "^2.2.0"
   }
 }
