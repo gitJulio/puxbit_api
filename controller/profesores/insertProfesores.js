@@ -16,10 +16,7 @@ exports.insertProfesores = async function(req, res, next) {
   //   sexo: req.body.sexo,
   //   telefono: req.body.telefono,
   //   id_colegio: process.env.id_colegio
-<<<<<<< HEAD
   ///
-=======
->>>>>>> c24adeb739e935aa8ab1d9f4e564ae17438bf216
   // }]
 
   req.body[0].id_colegio = process.env.id_colegio

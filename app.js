@@ -20,9 +20,9 @@ var cors = require('cors')
 app.use(bodyParser.json())
 
 ////socket
-var httpServer = http.Server;
-httpServer = new http.Server(app)
-io = socketIO(httpServer)
+// var httpServer = http.Server;
+// httpServer = new http.Server(app)
+// io = socketIO(httpServer)
 
 // io = socketIO(httpServer);
 ////Rutas
@@ -67,13 +67,13 @@ app.get('/', function(req, res) {
   res.send('Hello Puxbit!')
 })
 
-io.on('connection', cliente => {
-  console.log('Cliente Conectado');
-})
+// io.on('connection', cliente => {
+//   console.log('Cliente Conectado');
+// })
 
 
 // app.listen(3000)
-httpServer.listen(process.env.PORT, () => {
+app.listen(process.env.PORT, () => {
 
   console.log("Api Puxbit");
 })

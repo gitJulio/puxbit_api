@@ -8,12 +8,12 @@ process.env.SEED = process.env.SEED || 'es-te-es-el-seed-desarrollo';
 
 const config = {
   app: {
-    host: "localhost",
+    host: "192.168.0.102",
     api_key: "NTQyODQyNzM2MGE4NWI0MDFjNmMzYjZhMDE5NzgyY2Q",
     backup: false
   },
   db: {
-    host: 'localhost',
+    host: '52.176.97.243',
     port: "5432",
     database: 'puxbit',
     user: 'puxbit',
