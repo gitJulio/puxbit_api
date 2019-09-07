@@ -8,13 +8,13 @@ exports.getDataUsuario = async function(req, res, next) {
 
 
   let dataUsuario;
-
+console.log(process.env.id_usuario);
   if (process.env.id_nivel == 1) {
     /*Data administrador*/
   }
 
   if (process.env.id_nivel == 2) {
-    dataUsuario = await pg.func('public.ft_view_profesor_clases', process.env.id_usuario).catch(err => {
+    dataUsuario = await pg.func('public.ft_view_data_profesor', process.env.id_usuario).catch(err => {
       console.log(err);
       res.send({
         status: false
@@ -30,7 +30,7 @@ exports.getDataUsuario = async function(req, res, next) {
         status: false
       })
     } else {
-      res.send(dataUsuario[0]["ft_view_profesor_clases"])
+      res.send(dataUsuario[0]["ft_view_data_profesor"])
     }
   }
 
