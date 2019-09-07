@@ -8,7 +8,7 @@ process.env.SEED = process.env.SEED || 'es-te-es-el-seed-desarrollo';
 
 const config = {
   app: {
-    host: "192.168.0.102",
+    host: "localhost",
     api_key: "NTQyODQyNzM2MGE4NWI0MDFjNmMzYjZhMDE5NzgyY2Q",
     backup: false
   },

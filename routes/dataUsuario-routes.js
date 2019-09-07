@@ -8,6 +8,7 @@ router.use(mdAunt.api_key)
 router.use(mdAunt.verificaToken)
 
 router.post('/getDataUsuario', dataUsuario.getDataUsuario)
+router.post('/getGradosProfesor', dataUsuario.getGradosProfesor)
 
 
 
