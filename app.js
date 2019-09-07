@@ -1,4 +1,6 @@
 var express = require('express')
+var socketIO = require('socket.io')
+var http = require('http')
 const bodyParser = require('body-parser');
 const pg = require('./configuracion/ps_connection')
 var app = express()
@@ -6,17 +8,23 @@ const readline = require("readline");
 
 //***************cors*****************
 var op = {
-    origin: true,
-    methods: ['POST', 'GET'],
-    credentials: true,
-    maxAge: 3600
+  origin: true,
+  methods: ['POST', 'GET'],
+  credentials: true,
+  maxAge: 3600
 }
 var cors = require('cors')
-    //************************************
+//************************************
 
 // parse application/json
 app.use(bodyParser.json())
 
+////socket
+var httpServer = http.Server;
+httpServer = new http.Server(app)
+io = socketIO(httpServer)
+
+// io = socketIO(httpServer);
 ////Rutas
 // var sorteosRouter = require('./routes/sorteos-routes')
 var alumnosRouter = require('./routes/alumnos-routes')
@@ -56,10 +64,16 @@ app.use('/api/usuarios', cors(op), usuariosRouter)
 app.use('/api/dataUsuario', cors(op), dataUsuarioRouter)
 
 app.get('/', function(req, res) {
-    res.send('Hello Puxbit!')
+  res.send('Hello Puxbit!')
 })
 
+io.on('connection', cliente => {
+  console.log('Cliente Conectado');
+})
+
+
 // app.listen(3000)
-app.listen(process.env.PORT, () => {
-    console.log("Api Puxbit");
+httpServer.listen(process.env.PORT, () => {
+
+  console.log("Api Puxbit");
 })
