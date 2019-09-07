@@ -21,7 +21,7 @@ exports.getGradosProfesor = async function(req, res, next) {
       status: false
     })
   } else {
-    res.send(gradosProfesor[0]["ft_view_data_profesor_grados"])
+    res.send(gradosProfesor[0]["ft_view_profesor_grados"])
   }
 
 
