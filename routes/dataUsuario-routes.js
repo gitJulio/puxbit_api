@@ -11,6 +11,7 @@ router.post('/getDataUsuario', dataUsuario.getDataUsuario)
 router.post('/getGradosProfesor', dataUsuario.getGradosProfesor)
 router.post('/getSeccionesGradoProfesor', dataUsuario.getSeccionesGradoProfesor)
 router.post('/getClasesSeccionesGrados', dataUsuario.getClasesSeccionesGrados)
+router.post('/getAlumnosClase', dataUsuario.getAlumnosClase)
 
 
 
