@@ -22,7 +22,7 @@ exports.getAlumnosClase = async function(req, res, next) {
       status: false
     })
   } else {
-    res.send(alumnosClase[0]["ft_view_lista_alumnos_clases"])
+    res.send([alumnosClase[0]["ft_view_lista_alumnos_clases"]])
   }
 
 }
