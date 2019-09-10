@@ -1,5 +1,5 @@
 const pg = require('../../configuracion/ps_connection')
-const readline = require("readline");
+
 
 
 exports.getClase = async function(req, res, next) {

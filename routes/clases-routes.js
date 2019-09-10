@@ -11,6 +11,7 @@ router.post('/insertClase/', clases.insertClase);
 router.post('/updateClase/', clases.updateClase);
 router.post('/deleteClase/', clases.deleteClase);
 router.post('/getClase/', clases.getClase);
+router.post('/insertAsistenciaClase/', clases.insertAsistenciaClase);
 
 
 module.exports = router
