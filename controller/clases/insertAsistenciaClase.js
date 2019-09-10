@@ -6,6 +6,7 @@ exports.insertAsistenciaClase = async function(req, res, next) {
 
   req.body[0].id_colegio = process.env.id_colegio,
     req.body[0].id_anio_escolar = process.env.id_anio_escolar
+  req.body[0].id_usuario = process.env.id_usuario
   let asistencia;
   asistencia = await pg.func('public.ft_proc_insert_detallle_asistencia', JSON.stringify(req.body)).catch(err => {
     console.log(err)
