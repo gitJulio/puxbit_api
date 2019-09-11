@@ -25,19 +25,19 @@ exports.insertAsistenciaClase = async function(req, res, next) {
 
     if (estado == 3) {
       res.send({
-        mensage: "El día actual no está dentro del horario de clase"
+        mensaje: "El día actual no está dentro del horario de clase"
       })
     }
 
     if (estado == 2) {
       res.send({
-        mensage: "La hora actual está fuera del horario de clase"
+        mensaje: "La hora actual está fuera del horario de clase"
       })
     }
 
     if (estado == 1) {
       res.send({
-        mensage: "Asistencia registrada correctamente"
+        mensaje: "Asistencia registrada correctamente"
       })
     }
 
