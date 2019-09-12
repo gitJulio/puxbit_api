@@ -4,10 +4,12 @@ const readline = require("readline");
 
 exports.getRepasoAsistencia = async function(req, res, next) {
 
+  req.body[0].id_colegio = process.env.id_colegio;
+  req.body[0].id_anio_escolar = process.env.id_anio_escolar;
 
-
+  console.log(JSON.stringify(req.body));
   let clase;
-  clase = await pg.func('public.ft_insert_repaso_lista', JSON.stringify(req.body)).catch(err => {
+  clase = await pg.func('public.ft_proc_desibled_boton', JSON.stringify(req.body)).catch(err => {
     console.log(err)
   })
 
@@ -19,9 +21,7 @@ exports.getRepasoAsistencia = async function(req, res, next) {
       status: 'false'
     }])
   } else {
-    res.send({
-      status: clase[0]["ft_insert_repaso_lista"]
-    })
+    res.send(clase[0]["ft_proc_desibled_boton"])
   }
 
 
