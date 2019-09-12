@@ -6,7 +6,7 @@ exports.getRepasoAsistencia = async function(req, res, next) {
 
   req.body[0].id_colegio = process.env.id_colegio;
   req.body[0].id_anio_escolar = process.env.id_anio_escolar;
-  console.log(req.body);
+  // console.log(req.body);
   let clase;
   clase = await pg.func('public.ft_proc_deshabilitar_botones_asistencia_app_profesores', JSON.stringify(req.body)).catch(err => {
     console.log(err)
