@@ -14,6 +14,7 @@ router.post('/getClase/', clases.getClase);
 router.post('/insertAsistenciaClase/', clases.insertAsistenciaClase);
 router.post('/getRepasoAsistencia/', clases.getRepasoAsistencia);
 router.post('/getMesesClases/', clases.getMesesClases);
+router.post('/getDiasAsistenciaAlumnos/', clases.getDiasAsistenciaAlumnos);
 
 
 module.exports = router

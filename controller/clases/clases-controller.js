@@ -5,6 +5,7 @@ var getClase = require('./getClase')
 var insertAsistenciaClase = require('./insertAsistenciaClase')
 var getRepasoAsistencia = require('./getRepasoAsistencia')
 var getMesesClases = require('./getMesesClases')
+var getDiasAsistenciaAlumnos = require('./getDiasAsistenciaAlumnos')
 
 
 
@@ -15,3 +16,4 @@ exports.getClase = getClase.getClase;
 exports.insertAsistenciaClase = insertAsistenciaClase.insertAsistenciaClase;
 exports.getRepasoAsistencia = getRepasoAsistencia.getRepasoAsistencia;
 exports.getMesesClases = getMesesClases.getMesesClases;
+exports.getDiasAsistenciaAlumnos = getDiasAsistenciaAlumnos.getDiasAsistenciaAlumnos;
