@@ -13,6 +13,7 @@ router.post('/deleteClase/', clases.deleteClase);
 router.post('/getClase/', clases.getClase);
 router.post('/insertAsistenciaClase/', clases.insertAsistenciaClase);
 router.post('/getRepasoAsistencia/', clases.getRepasoAsistencia);
+router.post('/getMesesClases/', clases.getMesesClases);
 
 
 module.exports = router
