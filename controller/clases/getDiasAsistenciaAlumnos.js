@@ -5,7 +5,7 @@ const pg = require('../../configuracion/ps_connection')
 exports.getDiasAsistenciaAlumnos = async function(req, res, next) {
 
   let clase;
-  clase = await pg.func('public.ft_view_alumnos_asistencia', req.body.id_clase).catch(err => {
+  clase = await pg.func('public.ft_view_alumnos_asistencia', [req.body.id_clase, req.body.id_mes]).catch(err => {
     console.log(err)
   })
 
