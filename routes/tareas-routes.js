@@ -8,6 +8,7 @@ router.use(mdAunt.api_key)
 router.use(mdAunt.verificaToken)
 
 router.post('/insertarTarea/', tareas.insertarTarea);
+router.post('/getTarea/', tareas.getTarea);
 
 
 
