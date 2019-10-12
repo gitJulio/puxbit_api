@@ -9,6 +9,7 @@ router.use(mdAunt.verificaToken)
 
 router.post('/insertarTarea/', tareas.insertarTarea);
 router.post('/getTarea/', tareas.getTarea);
+router.post('/deleteTarea/', tareas.deleteTarea);
 
 
 
