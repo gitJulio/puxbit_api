@@ -37,6 +37,7 @@ var usuariosRouter = require('./routes/usuarios-routes')
 var usuariosRouter = require('./routes/usuarios-routes')
 var dataUsuarioRouter = require('./routes/dataUsuario-routes')
 var tareasRouter = require('./routes/tareas-routes')
+var profesores_appTareaRouter = require('./routes/profesores_app/tareas-router')
 
 //********Ruta Principal
 // app.use('/api/', cors(op), sorteosRouter)
@@ -57,6 +58,7 @@ app.use('/api/anios-escolares', cors(op), anios_escolaresRotuer)
 app.use('/api/usuarios', cors(op), usuariosRouter)
 app.use('/api/dataUsuario', cors(op), dataUsuarioRouter)
 app.use('/api/tareas', cors(op), tareasRouter)
+app.use('/api/tareasProfesor', cors(op), profesores_appTareaRouter)
 
 app.get('/', function(req, res) {
     res.send('Hello Puxbit!')
@@ -64,5 +66,5 @@ app.get('/', function(req, res) {
 
 // app.listen(3000)
 app.listen(process.env.PORT, () => {
-    console.log("Api Puxbit");
+    console.log("Api Puxbit Online");
 })
