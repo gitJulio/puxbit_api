@@ -16,7 +16,9 @@ exports.insertaTarea = async function(req, res, next) {
     })
   } else {
 
-    res.send(consulta[0]["ft_proc_tareas_insert"])
+    res.send({
+      status: consulta[0]["ft_proc_tareas_insert"]
+    })
   }
 
 }
