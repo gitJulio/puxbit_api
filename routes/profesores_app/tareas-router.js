@@ -7,7 +7,8 @@ router.use(mdAunt.content_type)
 router.use(mdAunt.api_key)
 router.use(mdAunt.verificaToken)
 
-router.post('/alumnosPresentaronTarea/', alumnosPresentaronTarea.alumnosPresentaronTarea) 
+router.post('/alumnosPresentaronTarea/', alumnosPresentaronTarea.alumnosPresentaronTarea)
+router.post('/insertaTarea/', alumnosPresentaronTarea.insertaTarea)
 
 
 
