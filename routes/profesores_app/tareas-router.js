@@ -10,6 +10,7 @@ router.use(mdAunt.verificaToken)
 router.post('/alumnosPresentaronTarea/', alumnosPresentaronTareaController.alumnosPresentaronTarea)
 router.post('/revisaTarea/', alumnosPresentaronTareaController.insertaTarea)
 router.post('/cerrarTarea/', alumnosPresentaronTareaController.cerrarTarea)
+router.post('/getHistorialTareas/', alumnosPresentaronTareaController.getHistorialTareas)
 
 
 
